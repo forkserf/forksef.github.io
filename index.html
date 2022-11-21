@@ -1,89 +1,70 @@
 <html>
 <title>Forkserf</title>
 
-<aside class="aside-wrapper">
-  <h1 class="logo-text"><span>Qpay</span>
-    <i class="fas fa-bars sidebar-toggle"></i>
-  </h1>
-
+<h3>Overview</h3>  
+Forkserf is an open-source improved-clone of the original Settlers (EU) / Serf City (US) game by Blue Byte software.  Forkserf was forked in 2020 from <a href="https://github.com/freeserf">FreeSerf</a> by JonLS and wicked_digger.  It is written in C/C++ and published under GPL3+ license.
+<h3>Why play Forkserf?</h3>
+Forkserf was created to improve the "single-player versus AI in random games" aspect of the original game.  This is done by completely rewriting a new AI from scratch, fixing bugs, and addition of optional features to make the game more balanced and interesting.  Also, as far as I know, FreeSerf (and as a result, Forkserf) is the only implementation that allows playing both DOS and Amiga versions in one binary.
+<h3>Why <i>not</i> play Forkserf?</h3>
+If you are looking for an authentic reproduction of the <i>original game AI</i>, single-player Missions, and multiplayer(!), I suggest you try nicymike's <a href="https://serflings.simpleguide.net/">Serflings</a>.
+Or, find the original game and run it in <a href="https://www.dosbox.com/">DosBox</a>, it works perfectly.  I don't know how to run the orginal Amiga version, though.
+Or, try one of the official (UbiSoft?) remakes though I have read they are worse than the original game because they introduce bugs, limit features, change some game logic?  not sure
+<h3>Requires original game content files</h3>
+For copyright reasons, the original DOS and Amiga game data cannot be included in this distribution and so you must provide your own copy.  These can be found in the original game install directories, and on various abandonware sites.
+<h3>Improvements over FreeSerf & original Serf City / Settlers game</h3>
+<ul>
+  <li>advanced AI for enemy players (FreeSerf has no AI at all!  and the original game AI was awful)</li>
+  <li>fixes for numerous bugs, including game-breaking bugs</li>
+  <li>custom map generator, allowing highly varied maps</li>
+  <li>missing ambient sounds added</li>
+  <li>can adjust game speed up to 40x (inherited from FreeSerf)</li>
+  <li>uses <i>both</i> Amiga and DOS sounds & music if available</li>
+  <li>debugging tools, including overlays for highlighting AI logic and serf status</li>
+</ul>
+<h3>Optional internal game changes to improve playability</h3>
+<ul>
+  <li>timeout & retry of building resource requests</li>
+  <li>prioritized transport of resources that can be immediately used</li>
+  <li>faster clearing of Lost serfs</li>
+</ul>
+<h3>Optional New Features</h3>
+<ul>
+  <li>auto-savegame</li>
+  <li>serfs can be transported in Boats!</li>
+  <li>seasonal progression with unique graphics for winter/spring/summer/fall</li>
+  <li>advanced wheat farming</li>
+  <li>empty building sites don't require any burn wait</li>
+  <li>baby trees mature slowly (nerfs Forester/Ranger)</li>
+  <li>trees spawn spontaneously, allowing forests to grow on their own</li>
+</ul>
+<h3>Known Limitations</h3>
   <ul>
-    <li><i class="fas fa-home"></i> Home</li>
-    <li><i class="fas fa-building"></i> Company</li>
-    <li><i class="fas fa-dollar-sign"></i> Perks</li>
-    <li><i class="fas fa-file-contract"></i> Legal</li>
-    <li><i class="fas fa-credit-card"></i> Payments</li>
-  </ul>
-
-  <ul>
-    <li><i class="fas fa-headset"></i> Get Help</li>
-    <li><i class="fas fa-comment"></i> Chat With Us</li>
-  </ul>
-</aside>
-
-  <h3>Overview</h3>  
-  Forkserf is an open-source improved-clone of the original Settlers (EU) / Serf City (US) game by Blue Byte software.  Forkserf was forked in 2020 from <a href="https://github.com/freeserf">FreeSerf</a> by JonLS and wicked_digger.  It is written in C/C++ and published under GPL3+ license.
-  <h3>Why play Forkserf?</h3>
-  Forkserf was created to improve the "single-player versus AI in random games" aspect of the original game.  This is done by completely rewriting a new AI from scratch, fixing bugs, and addition of optional features to make the game more balanced and interesting.  Also, as far as I know, FreeSerf (and as a result, Forkserf) is the only implementation that allows playing both DOS and Amiga versions in one binary.
-  <h3>Why <i>not</i> play Forkserf?</h3>
-  If you are looking for an authentic reproduction of the <i>original game AI</i>, single-player Missions, and multiplayer(!), I suggest you try nicymike's <a href="https://serflings.simpleguide.net/">Serflings</a>.
-  Or, find the original game and run it in <a href="https://www.dosbox.com/">DosBox</a>, it works perfectly.  I don't know how to run the orginal Amiga version, though.
-  Or, try one of the official (UbiSoft?) remakes though I have read they are worse than the original game because they introduce bugs, limit features, change some game logic?  not sure
-  <h3>Requires original game content files</h3>
-  For copyright reasons, the original DOS and Amiga game data cannot be included in this distribution and so you must provide your own copy.  These can be found in the original game install directories, and on various abandonware sites.
-  <h3>Improvements over FreeSerf & original Serf City / Settlers game</h3>
-  <ul>
-    <li>advanced AI for enemy players (FreeSerf has no AI at all!  and the original game AI was awful)</li>
-    <li>fixes for numerous bugs, including game-breaking bugs</li>
-    <li>custom map generator, allowing highly varied maps</li>
-    <li>missing ambient sounds added</li>
-    <li>can adjust game speed up to 40x (inherited from FreeSerf)</li>
-    <li>uses <i>both</i> Amiga and DOS sounds & music if available</li>
-    <li>debugging tools, including overlays for highlighting AI logic and serf status</li>
-  </ul>
-  <h3>Optional internal game changes to improve playability</h3>
-  <ul>
-    <li>timeout & retry of building resource requests</li>
-    <li>prioritized transport of resources that can be immediately used</li>
-    <li>faster clearing of Lost serfs</li>
-  </ul>
-  <h3>Optional New Features</h3>
-  <ul>
-    <li>auto-savegame</li>
-    <li>serfs can be transported in Boats!</li>
-    <li>seasonal progression with unique graphics for winter/spring/summer/fall</li>
-    <li>advanced wheat farming</li>
-    <li>empty building sites don't require any burn wait</li>
-    <li>baby trees mature slowly (nerfs Forester/Ranger)</li>
-    <li>trees spawn spontaneously, allowing forests to grow on their own</li>
-  </ul>
-  <h3>Known Limitations</h3>
-    <ul>
-    <li>single player Missions from original game are included but not playtested, I only play random games</li>
-    <li>MacOS builds provided but not playtested, I don't have a Mac</li>
-    <li>Windows8/10/11+ builds provided but not playtested, I only have Windows7</li>
-    <li>No multiplayer, and no immediate plans for multiplayer</li>
-    <li>the original game Character personalities are not yet implemented, all AI players use same improved AI.  Personalities will be added soon</li>
-    <li>combat playtesting and AI combat logic is primitive.  It works fine but I haven't paid as much attention to it as the economy part</li>
-    <li>occasional crash bugs, but it is quite stable for me.  Crash bugs are top priority to fix.  I suggest using AutoSave feature just in case</li>
-  </ul>
-  <h3>Future Plans and possibilities</h3>
-  <ul>
-    <li>improved AI attack logic</li>
-    <li>implement AI Character personalities, so they behave uniquely</li>
-    <li>OPTIONAL overhauled pig farming, with pannage (i.e. pig foraging) where pigs eat acorns from nearby oak trees in autumn instead of being fed grain</li>
-    <li>OPTIONAL snow and rain effects.  It is easy to make snow on the ground by switching the tiles to Tundra, but buildings need snow and falling snow weather effects would be nice, same with rain</li>
-    <li>OPTIONAL knight promotion and combat overhaul,.  Intent is to make rank matter more and gold stored matter less, and maybe tie knight promotion to gold/meat availability</li>
-    <li>OPTIONAL random events & special encounters, like Fallout, CrusaderKings</li>
-    <li>OPTIONAL overhauled serf reproduction logic, possibly including female serfs, babies, etc.</li>
-    <li>OPTIONAL churches, and serf happiness/morale</li
-    <li>OPTIONAL serf skills, so an experienced ex. blacksmith is more effective than a new one</li>
-  </ul>
-  <h3>Contributing</h3>
-  If you would like to participate in the project, contact me on discord (as tlongstretch5151), or on github (as tlongstretch5151), or email tlongstretch5151@gmail.com.  Also,   I can usually be found squatting in the Serflings discord channel, I don't have a Forkserf channel because as far as I know I'm the only one playing it
-  <h3>Help with build issues?</h3>
-  I am not really much of a developer, I am a linux sysadmin by trade.  I have only limited knowledge of CMake, Visual Studio, vcpkg, SDL2, etc.  I will help if I can but don't expect much
-  <h3>What about FreeSerf?</h3>
-  I am hoping that jonls and wdigger will resume work on their project one day.  I still hear from wdigger occasionally but jonls seems to be long gone.  I have been submitting all fixes for proven bugs I find in FreeSerf to their project
+  <li>single player Missions from original game are included but not playtested, I only play random games</li>
+  <li>MacOS builds provided but not playtested, I don't have a Mac</li>
+  <li>Windows8/10/11+ builds provided but not playtested, I only have Windows7</li>
+  <li>No multiplayer, and no immediate plans for multiplayer</li>
+  <li>the original game Character personalities are not yet implemented, all AI players use same improved AI.  Personalities will be added soon</li>
+  <li>combat playtesting and AI combat logic is primitive.  It works fine but I haven't paid as much attention to it as the economy part</li>
+  <li>occasional crash bugs, but it is quite stable for me.  Crash bugs are top priority to fix.  I suggest using AutoSave feature just in case</li>
+</ul>
+<h3>Future Plans and possibilities</h3>
+<ul>
+  <li>improved AI attack logic</li>
+  <li>implement AI Character personalities, so they behave uniquely</li>
+  <li>OPTIONAL overhauled pig farming, with pannage (i.e. pig foraging) where pigs eat acorns from nearby oak trees in autumn instead of being fed grain</li>
+  <li>OPTIONAL snow and rain effects.  It is easy to make snow on the ground by switching the tiles to Tundra, but buildings need snow and falling snow weather effects would be nice, same with rain</li>
+  <li>OPTIONAL knight promotion and combat overhaul,.  Intent is to make rank matter more and gold stored matter less, and maybe tie knight promotion to gold/meat availability</li>
+  <li>OPTIONAL random events & special encounters, like Fallout, CrusaderKings</li>
+  <li>OPTIONAL overhauled serf reproduction logic, possibly including female serfs, babies, etc.</li>
+  <li>OPTIONAL churches, and serf happiness/morale</li
+  <li>OPTIONAL serf skills, so an experienced ex. blacksmith is more effective than a new one</li>
+</ul>
+<h3>Contributing</h3>
+If you would like to participate in the project, contact me on discord (as tlongstretch5151), or on github (as tlongstretch5151), or email tlongstretch5151@gmail.com.  Also,   I can usually be found squatting in the Serflings discord channel, I don't have a Forkserf channel because as far as I know I'm the only one playing it
+<h3>Help with build issues?</h3>
+I am not really much of a developer, I am a linux sysadmin by trade.  I have only limited knowledge of CMake, Visual Studio, vcpkg, SDL2, etc.  I will help if I can but don't expect much
+<h3>What about FreeSerf?</h3>
+I am hoping that jonls and wdigger will resume work on their project one day.  I still hear from wdigger occasionally but jonls seems to be long gone.  I have been submitting all fixes for proven bugs I find in FreeSerf to their project
 </div>
 </body>
 </html>
