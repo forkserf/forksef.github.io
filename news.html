@@ -2,10 +2,28 @@
   <title>Forkserf News & Changelog</title>
 <body bgcolor="#DCDCDC">
 <h2>News</h2>
-<h4><b>Dec23 2022 - New Stable Minor Release 0.4.5</b></h4>
+<h4><b>Dec29 2022 - New Stable Minor Release 0.4.6</b></h4>
+<hr>
+  <list>  
+    <li>game options persist, saved to disk each change. (independent of to savegame files, options are not stored in savegames)</li>
+    <li>option_WaterDepthLuminosity, shows varying lightness for shallow to deep water</li>
+    <li>option_RandomizeInstruments, chooses random MIDI instruments for the DOS game music tracks each play</li>
+    <li>fixed original game "bug" with map generation where Submerged Trees only appear in odd top-left place, and Submerged Boulders which were part of original game code/content but never appeared... now appear</li>
+    <li>added water splashes around submerged boulders, they are too flat</li>
+    <li>greatly expanded FogOfWar visibility range of buildings, to fix issue where enemies are within attack range but not visible/attackable</li>
+    <li>Right Click to close any popup/cancel road build. Previously 'ESCAPE' key was the only other way</li>
+    <li>fixed misc bugs with UI, save/load, graphics</li>
+    <li>option_SailorsMoveFaster. Sailors in water move 66% faster to make them more useful</li>
+    <li>Save and Load game popup, scrolling, other improvements</li>
+    <li>Reworked options screen</li>
+    <li>updated game type icons in game init box</li>
+    <li>disabled original game Missions entirely, they don't work right now</li>
+  </list>
+<hr>
+<h5>Dec23 2022 - New Stable Minor Release 0.4.5</h5>
 <hr>
   <list>
-    <li>slightly quieter boiling sound for Smelters, they are too loud and annoying
+    <li>slightly quieter boiling sound for Smelters, they are too loud and annoying</li>
     <li>implemented 'special click' functionality like original game, plus supporting three different implementations (optional)</li>
     <li>build possibilities overlay now available by special-clicking on the build panel button, like in original game (previously only when 'b' pressed)</li>
     <li>added original game limitation of "cannot place a building whose flag touches the edge of a water tile" which Freeserf had not implemented</li>
@@ -14,8 +32,9 @@
     <li>zooming with mouse wheel no longer requires holding CTRL key</li>
     <li>fixed bug where zoom level was temporarily lost when changing window size</li>
     <li>added can-build-flag icon to build options overlay like in original game</li>
-    <li>expanded main options popup window and changed advanced options paging method slightly
+    <li>expanded main options popup window and changed advanced options paging method slightly</li>
     <li>removed debugging information from some building popups</li>
+  </list>
 <hr>
 <h5>Dec22 2022 - New Stable Minor Release 0.4.4</h5>
 <hr>
@@ -23,6 +42,7 @@
     <li>added flowers to Spring season in FourSeason (cosmetic only)</li>
     <li>added shading of map objects when on a steep downward slope left->right (cosmetic only)</li>
     <li>possibly fixed music issue, music should now replay forever when last track ends</li>
+  </list>
 <hr>
 <h5>Dec18 2022 - New Stable Minor Release 0.4.3</b></h5>
 <hr>
@@ -35,6 +55,7 @@
     <li>internal: spiral_dist now allows up to radius 48 (was 24)</li>
     <li>internal: game can now indirectly set interface cursor pos</li>
     <li>internal: greatly consolidated draw_sprite functions, added extensive comments</li>
+  </list>
 <hr>
 <h5>Dec04 2022 - New Stable Minor Release 0.4.2</h5>
 <hr>
@@ -43,6 +64,7 @@
     <li>performance improvements for AI, including caching similar road solutions, capping solution complexity, resting during long solutions</li>
     <li>cleaned up code related to mutex locking</li>
     <li>minor bugfixes and logging tweaks, including updates/frames-per-sec logging</li>
+  </list>
 <hr>
 <h5>Dec01 2022 - New Stable Minor Release 0.4.1</h5>
 <hr>
