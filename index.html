@@ -3,29 +3,29 @@
 <body bgcolor="#DCDCDC">
 <a href="/forkserf_nice_screenshot.png"><img src="/forkserf_nice_screenshot_cropped_thumbnail.png"></a>
 <a href="/forkserf_spring_flowers_trees.png"><img src="/forkserf_spring_flowers_trees_cropped_thumbnail.png"></a>
-  
-<h4><b>Dec31 2022 - discord channel 'Forkserf'</b></h4>
-<hr>
-<h4><b>Dec29 2022 - New Stable Minor Release 0.4.6</b></h4>
+
+<h4><b>Jan08 2023 - New Stable Minor Release 0.4.7</b></h4>
 <hr>
   <list>  
-    <li>game options persist, saved to disk each change. (independent of to savegame files, options are not stored in savegames)</li>
-    <li><a href="https://github.com/forkserf/forkserf/wiki/option_WaterDepthLuminosity">option_WaterDepthLuminosity</a>, shows varying lightness for shallow to deep water</li>
-    <li><a href="https://github.com/forkserf/forkserf/wiki/Random-MIDI-Instruments-for-DOS-Music">option_RandomizeInstruments</a>, chooses random MIDI instruments for the DOS game music tracks each play</li>
-    <li>fixed original game "bug" with map generation where Submerged Trees only appear in odd top-left place, and Submerged Boulders which were part of original game code/content but never appeared... now appear</li>
-    <li>added water splashes around submerged boulders, they are too flat</li>
-    <li>greatly expanded FogOfWar visibility range of buildings, to fix issue where enemies are within attack range but not visible/attackable</li>
-    <li>Right Click to close any popup/cancel road build. Previously 'ESCAPE' key was the only other way</li>
-    <li>fixed misc bugs with UI, save/load, graphics</li>
-    <li>option_SailorsMoveFaster. Sailors in water move 66% faster to make them more useful</li>
-    <li>Save and Load game popup, scrolling, other improvements</li>
-    <li>Reworked options screen</li>
-    <li>updated game type icons in game init box</li>
-    <li>disabled original game Missions entirely, they don't work right now</li>
+    <li>AI improvements for economy, especially managing parallel economies around Stocks</li>
+    <li>AI improvements to attack logic, it is much more conservative now.  Previously it was foolishly aggressive</li>
+    <li>Fixed resource production graphs, they are working great now</li>
+    <li>Elimination of long-snaking grass paths across water bodies (see https://github.com/freeserf/freeserf/issues/519)</li>
+    <li>Added new reeds/cattails in water (optional)</li>
+    <li>Added map generator sliders specific to WaterTrees and WaterStones now that they are fixed (they were broken in original game)</li>
+    <li>Map Generator options persist to disk</li>
+    <li>New larger submerged stones based on partial loading of existing junk objects from land</li>
+    <li>Tweaked water splashes around water stones</li>
+    <li>Improved water road contrast with option_WaterDepthLuminosity</li>
+    <li>Improved AI castle placement logic, though human-player-with-FogOfWar-on placement is unchanged</li>
+    <li>Added pathfinding check to free-walking behaviors to prevent Knights (on attack) and Serfs (when fishing, chopping, farming, planting) from trying to walk around excessively large bodies of water</li>
+    <li>Building sounds now have ambient focus area of around 800x600 pixels instead of entire screen, to reduce noise when playing at high resolutions</li>
+    <li>Fixes for root cause of stuck-serf in StateWaitIdleOnPath issues.   Previously the AI would work around these by booting stuck serfs, but this resulted in the serfs not reaching their destination and a replacement never called, sometimes causing buildings to never be completed/occupied</li>
+    <li>Tweaks to dulling of sprites in winter with FourSeasons on</li>
   </list>
-  <br>
-    <a href="/news.html">Older News / Changelog</a>
-<hr>
+<br>
+<a href="/news.html">Older News / Changelog</a>
+
   
 <h3>Overview</h3>  
 Forkserf is an open-source improved-clone of the original Settlers (EU) / Serf City (US) game by Blue Byte software.  Forkserf was forked in 2020 from <a href="https://github.com/freeserf">FreeSerf</a> by JonLS and wicked_digger.  It is written in C/C++ and published under GPL3+ license.
