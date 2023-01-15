@@ -4,24 +4,12 @@
 <a href="/forkserf_nice_screenshot.png"><img src="/forkserf_nice_screenshot_cropped_thumbnail.png"></a>
 <a href="/forkserf_spring_flowers_trees.png"><img src="/forkserf_spring_flowers_trees_cropped_thumbnail.png"></a>
 
-<h4><b>Jan08 2023 - New Stable Minor Release 0.4.7</b></h4>
+<h4><b>Jan14 2023 - New Stable Major Release 0.5.0</b></h4>
 <hr>
   <list>  
-    <li>AI improvements for economy, especially managing parallel economies around Stocks</li>
-    <li>AI improvements to attack logic, it is much more conservative now.  Previously it was foolishly aggressive</li>
-    <li>Fixed resource production graphs, they are working great now</li>
-    <li>Elimination of long-snaking grass paths across water bodies (see https://github.com/freeserf/freeserf/issues/519)</li>
-    <li>Added new reeds/cattails in water (optional)</li>
-    <li>Added map generator sliders specific to WaterTrees and WaterStones now that they are fixed (they were broken in original game)</li>
-    <li>Map Generator options persist to disk</li>
-    <li>New larger submerged stones based on partial loading of existing junk objects from land</li>
-    <li>Tweaked water splashes around water stones</li>
-    <li>Improved water road contrast with option_WaterDepthLuminosity</li>
-    <li>Improved AI castle placement logic, though human-player-with-FogOfWar-on placement is unchanged</li>
-    <li>Added pathfinding check to free-walking behaviors to prevent Knights (on attack) and Serfs (when fishing, chopping, farming, planting) from trying to walk around excessively large bodies of water</li>
-    <li>Building sounds now have ambient focus area of around 800x600 pixels instead of entire screen, to reduce noise when playing at high resolutions</li>
-    <li>Fixes for root cause of stuck-serf in StateWaitIdleOnPath issues.   Previously the AI would work around these by booting stuck serfs, but this resulted in the serfs not reaching their destination and a replacement never called, sometimes causing buildings to never be completed/occupied</li>
-    <li>Tweaks to dulling of sprites in winter with FourSeasons on</li>
+    <li>rewrote AI pathfinder.  AI will now plot complex multi-segment roads comprised of any number of new and/or existing paths</li>
+    <li>zoom changes: more zoom levels, mousewheel zoom centers on mouse pointer, now using "pixel art" style non-interpolated zoom instead of interpolated fuzzy zoom"</li>
+    <li>increased number of concurrent unfinished buildings AI allows</li>
   </list>
   <br>
 <a href="/news.html">Older News / Changelog</a>
