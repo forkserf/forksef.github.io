@@ -4,16 +4,22 @@
 <a href="/forkserf_nice_screenshot.png"><img src="/forkserf_nice_screenshot_cropped_thumbnail.png"></a>
 <a href="/forkserf_spring_flowers_trees.png"><img src="/forkserf_spring_flowers_trees_cropped_thumbnail.png"></a>
 
-<h4><b>Jan14 2023 - New Stable Major Release 0.5.0</b></h4>
+<h4>Jan17 2023 - New Stable Minor Release 0.5.1</h4>
 <hr>
   <list>  
-    <li>rewrote AI pathfinder.  AI will now plot complex multi-segment roads comprised of any number of new and/or existing paths</li>
-    <li>zoom changes: more zoom levels, mousewheel zoom centers on mouse pointer, now using "pixel art" style non-interpolated zoom instead of interpolated fuzzy zoom</li>
-    <li>increased number of concurrent unfinished buildings AI allows</li>
+    <li>fixed AI new AI pathfinder creating excess roads as time passed</li>
+    <li>AI will now make desperate attacks for resources that it does not posses if it can no longer expand by building knight huts</li>
+    <li>fixed zoom centering being off after a window resize</li>
+    <li>added <a href="https://github.com/forkserf/forkserf/wiki/option_SpinningAmigaStar">Amiga-style spinning star panel animation</a> (optional)</li>
+    <li>AI will build Stone Mines if no above-ground stone in the area</li>
+    <li>slightly lowered contrast for tops of winter trees w/ FourSeasons</li>
+    <li>fixed an uncommon crash bug when a Flag is destroyed while AI is plotting a road to it</li>
+    <li>AI will now only consider passthru road-plotting solutions for important high-traffic buildings, not low volume ones</li>
   </list>
   <br>
-<a href="/news.html">Older News / Changelog</a>
-<hr>
+<hr> 
+<h3>Download Links</h3>
+  <a href="https://github.com/forkserf/forkserf/releases">Pre-compiled binaries here</a>  
  
 <h3>Overview</h3>  
 Forkserf is an open-source improved-clone of the original Settlers (EU) / Serf City (US) game by Blue Byte software.  Forkserf was forked in 2020 from <a href="https://github.com/freeserf">FreeSerf</a> by JonLS and wicked_digger.  It is written in C/C++ and published under GPL3+ license.
