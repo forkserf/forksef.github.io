@@ -2,6 +2,37 @@
   <title>Forkserf News & Changelog</title>
 <body bgcolor="#DCDCDC">
 <h2>News</h2>
+<h4>Feb15 2023 - New Stable Minor Release 0.6.2</h4>
+  <list>
+    <li>in mine popup, mine efficiency percentage replaced with histogram showing actual mining results over time</li>
+    <li>'i' key cycles through player's mines</li>
+    <li>UI fixes related to zooming, notifications, new-game popups</li>
+    <li>restored ability to re-target current building popup, was broken in v0.6.x</li>
+  </list>
+  <br>
+<hr>
+<h4>Feb11 2023 - New Stable Minor Release 0.6.1</h4>
+  <list>
+    <li>Viewport zoom now separated from UI elements zoom (independent UI scaling will be added later)</li>
+    <li>some UI bugs related to zoom/popups/dragging fixed</li>
+  </list>
+  <br>
+<hr>
+<h4>Feb09 2023 - New Stable Major Release 0.6.0</h4>
+  <list>
+    <li>game popup windows can be moved and if moved will stay permanently until closed, and will auto-refresh. Any number of popups can be opened. Some limitations to this, notably that it doesn't yet work while zoomed</li>
+    <li>castle/stock "out queues" for serfs & resources now visible as a fourth page of the current set of popups for these buildings</li>
+    <li>viewport automatically recenters after game window resized</li>
+    <li>bug detection-workaround for certain type of blocked serf issue</li>
+    <li>circular-serf-gridlock/deadlock detection and auto-fix logic from original game now triggers properly</li>
+    <li>fixed option_ForestersCreateMonoculture bug</li>
+    <li>fix for land road appearing to allow crossing single water tile</li>
+    <li>popup window error will be show before crashing in Windows when game cannot continue because acceptable AI castle locations could be be found</li>
+    <li>Number pad arrows will move the game/map cursor one pos at a time in the specified direction (6 valid dirs), mostly for counting distance when debugging</li>
+    <li>Debugging: added hidden debug popup that allows "go to pos XXX" (click the right shield on the PanelBar)</li>
+  </list>
+  <br>
+<hr>
 <h4>Jan20 2023 - New Stable Minor Release 0.5.2</h4>
 <hr>
   <list>
@@ -13,7 +44,6 @@
     <li>misc small bug and AI fixes</li>
   </list>
   <br>
-  <a href="/news.html">Older News / Changelog</a>
 <hr> 
 <h4>Jan17 2023 - New Stable Minor Release 0.5.1</h4>
 <hr>
